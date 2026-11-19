@@ -1,176 +1,115 @@
-# NetworkWalks B084 – Week 3: Password Recovery with John the Ripper & NetworkWalks Tools
+NetworkWalks B084 – Week 3: Password Recovery with John the Ripper & NetworkWalks Tools
+Cybersecurity Internship | Batch B084 | Week 3
+Modules: W3-PM1 and W3-PM2
+Environment: Windows 11
+Overview
+This repository documents my Week 3 practical work on password recovery for authorized, institute-provided PDF training files.
+- W3-PM1: PDF hash extraction and password recovery using John the Ripper (Jumbo) with the Johnny GUI.
+- W3-PM2: PDF hash extraction and dictionary attack using NetworkWalks Hash Calculator and Password Cracker.
+Authorization: These exercises were performed on training files for the internship. Use password-recovery techniques only on files you own or have explicit permission to test.
 
-**Cybersecurity Internship | Batch B084 | Week 3**  
-**Modules:** W3-PM1 and W3-PM2  
-**Environment:** Windows 11
-
-## Overview
-
-This repository documents my Week 3 practical work on password recovery for institute-provided, password-protected PDF training files.
-
-- **W3-PM1:** Extracted PDF password-verification data and performed an offline dictionary/password-recovery test using John the Ripper (Jumbo) with the Johnny GUI.
-- **W3-PM2:** Extracted the PDF hash with the NetworkWalks Hash Calculator and tested candidates with the NetworkWalks Password Cracker.
-
-> **Authorization:** All testing documented here was performed only on training files supplied for the internship. Use these techniques only on files you own or have explicit permission to test.
-
-## Repository Structure
-
-Keep the filenames and folder names below exactly as written so the screenshots display correctly in this README.
-
-```text
+Repository Structure
+Important: The screenshot filenames below are the original filenames of the six images you uploaded. Keep these names unchanged when adding them to GitHub.
 NetworkWalks-B084-Week3-Password-Recovery/
 │
 ├── README.md
 │
 ├── W3-PM1-John-the-Ripper/
-│   ├── findings.md
 │   └── screenshots/
-│       ├── 01-pm1-pdf-hash-extraction.png
-│       ├── 02-pm1-johnny-cracking-result.png
-│       └── 03-pm1-flag-captured.png
+│       ├── Screenshot 2026-11-19 164427.png
+│       ├── Screenshot 2026-11-19 165008.png
+│       └── Screenshot 2026-11-19 165445.png
 │
 ├── W3-PM2-NetworkWalks-Tools/
-│   ├── findings.md
 │   └── screenshots/
-│       ├── 01-pm2-hash-calculator.png
-│       ├── 02-pm2-password-cracker-result.png
-│       └── 03-pm2-flag-captured.png
+│       ├── Screenshot 2026-11-19 165338.png
+│       ├── Screenshot 2026-11-19 165421.png
+│       └── Screenshot 2026-11-19 165035.png
 │
 └── Final-Report/
     └── week-3-report.md
-```
-
-## W3-PM1 – Password Recovery with John the Ripper
-
-### Objective
-
-Extract the password-verification data from the authorized PM1 encrypted PDF, test password candidates with John the Ripper, and verify that the recovered password opens the correct PDF.
-
-### Workflow
-
-1. Extract the PDF hash from the authorized training PDF.
-2. Load the hash into Johnny, the graphical interface for John the Ripper.
+W3-PM1 – Password Recovery with John the Ripper
+Objective
+Extract the PDF hash from the authorized training PDF, test password candidates using John the Ripper, and verify the recovered password against the PDF.
+Workflow
+1. Extract the PDF hash using the PDF hash-extraction tool.
+2. Load the extracted hash into Johnny.
 3. Start the password-recovery process.
 4. Review the result in Johnny.
-5. Open the corresponding training PDF and verify access.
+5. Verify access by opening the corresponding training PDF.
+Practical Evidence
+1. OnlineHashCrack – PDF Hash Extraction
 
-### Evidence
+<img width="1917" height="1027" alt="Screenshot 2026-11-19 164427" src="https://github.com/user-attachments/assets/7d2a3c3e-4e96-4a5d-bf16-3d4f11319fe9" />
 
-**1. PDF hash extraction**
 
-Save the OnlineHashCrack PDF Hash Extractor screenshot as:
+2. Johnny – John the Ripper Password Recovery Result
 
-`W3-PM1-John-the-Ripper/screenshots/01-pm1-pdf-hash-extraction.png`
+<img width="1915" height="1078" alt="Screenshot 2026-11-19 165008" src="https://github.com/user-attachments/assets/df435e56-cc1d-48d2-bf5b-786f176db4e0" />
 
-![PM1 – PDF hash extraction](W3-PM1-John-the-Ripper/screenshots/01-pm1-pdf-hash-extraction.png)
 
-**2. John the Ripper / Johnny result**
+3. NetworkWalks – PM1 Flag Captured Confirmation
 
-Save the Johnny screenshot as:
+<img width="1917" height="1078" alt="Screenshot 2026-11-19 165029" src="https://github.com/user-attachments/assets/aac21729-f2de-4f47-b7f2-1ccd6b18b71e" />
 
-`W3-PM1-John-the-Ripper/screenshots/02-pm1-johnny-cracking-result.png`
-
-![PM1 – Johnny cracking result](W3-PM1-John-the-Ripper/screenshots/02-pm1-johnny-cracking-result.png)
-
-**3. PM1 flag captured confirmation**
-
-Save the PM1 completion/flag screenshot as:
-
-`W3-PM1-John-the-Ripper/screenshots/03-pm1-flag-captured.png`
-
-![PM1 – Flag captured confirmation](W3-PM1-John-the-Ripper/screenshots/03-pm1-flag-captured.png)
-
-### PM1 Findings
-
+PM1 Findings
 - PDF hash extraction was completed.
 - Johnny displayed a successful result for the loaded PDF hash.
-- The screenshot evidence showed 1 of 1 hashes cracked.
+- The screenshot shows 1 of 1 hashes cracked.
 - The recovered password was checked against the corresponding training PDF.
-
-## W3-PM2 – Password Recovery with NetworkWalks Tools
-
-### Objective
-
+W3-PM2 – Password Recovery with NetworkWalks Tools
+Objective
 Use the NetworkWalks Hash Calculator and Password Cracker to extract and test the PDF password hash for the PM2 training file.
-
-### Workflow
-
-1. Open the NetworkWalks Hash Calculator and select the PDF option.
+Workflow
+1. Open NetworkWalks Hash Calculator and select the PDF option.
 2. Load the authorized PM2 training PDF and extract its hash.
-3. Copy the extracted `$pdf$` hash into the NetworkWalks Password Cracker.
+3. Copy the extracted hash into NetworkWalks Password Cracker.
 4. Run the provided dictionary attack.
 5. Review the attempt count and successful-match message.
-6. Open the corresponding training PDF and verify access.
+6. Verify access by opening the corresponding training PDF.
+Practical Evidence
+1. NetworkWalks – Hash Calculator
 
-### Evidence
+<img width="1917" height="1026" alt="Screenshot 2026-11-19 165338" src="https://github.com/user-attachments/assets/41bf0edb-7f8a-4f19-a864-6677adbc6529" />
 
-**1. NetworkWalks Hash Calculator**
 
-Save the Hash Calculator screenshot as:
+2. NetworkWalks – Password Cracker Result
 
-`W3-PM2-NetworkWalks-Tools/screenshots/01-pm2-hash-calculator.png`
+<img width="1916" height="1031" alt="Screenshot 2026-11-19 165421" src="https://github.com/user-attachments/assets/ea50034b-8fb4-4613-98ba-a0c80e8cc5e1" />
 
-![PM2 – NetworkWalks Hash Calculator](W3-PM2-NetworkWalks-Tools/screenshots/01-pm2-hash-calculator.png)
 
-**2. NetworkWalks Password Cracker result**
+3. NetworkWalks – PM2 Flag Captured Confirmation
 
-Save the Password Cracker screenshot as:
+<img width="1915" height="1078" alt="Screenshot 2026-11-19 165445" src="https://github.com/user-attachments/assets/cf374c40-a9d3-4df0-ae49-285395b3e872" />
 
-`W3-PM2-NetworkWalks-Tools/screenshots/02-pm2-password-cracker-result.png`
 
-![PM2 – NetworkWalks Password Cracker result](W3-PM2-NetworkWalks-Tools/screenshots/02-pm2-password-cracker-result.png)
-
-**3. PM2 flag captured confirmation**
-
-Save the PM2 completion/flag screenshot as:
-
-`W3-PM2-NetworkWalks-Tools/screenshots/03-pm2-flag-captured.png`
-
-![PM2 – Flag captured confirmation](W3-PM2-NetworkWalks-Tools/screenshots/03-pm2-flag-captured.png)
-
-### PM2 Findings
-
-- The Hash Calculator identified the encrypted PDF and extracted a PDF hash.
+PM2 Findings
+- The Hash Calculator extracted a hash from the encrypted PDF.
 - The displayed hash information included Revision R4, Version V4, and 128-bit key length.
 - The Password Cracker screenshot showed a successful match after 91 of 100 candidate attempts.
 - The recovered password was checked against the corresponding training PDF.
+Tools Used
+Tool	Purpose
+Windows 11	Lab operating system
+OnlineHashCrack PDF Hash Extractor	PM1 PDF hash extraction
+John the Ripper (Jumbo)	Offline password-candidate testing
+Johnny GUI	Graphical interface for John the Ripper
+NetworkWalks Hash Calculator	PM2 PDF hash extraction
+NetworkWalks Password Cracker	Browser-based dictionary attack
+Microsoft Edge	Accessing browser-based tools
 
-## Key Learnings
 
+Key Learnings
 - A PDF hash is password-verification data used by a compatible tool to test candidate passwords; it is not the plaintext password.
 - A dictionary attack tests a list of candidate passwords against the extracted hash.
 - A successful match should be verified by opening the exact PDF from which the hash was extracted.
 - Keep PM1 and PM2 evidence separate because they refer to different exercises and files.
 - Weak or predictable passwords may be discovered when they appear in the tested candidate list.
+Final Report
+Add your overall summary and learning reflections to Final-Report/week-3-report.md.
+Responsible Use and Privacy
+This repository is for education and authorized security training. Do not test files without permission or upload confidential documents to third-party tools.
 
-## Tools Used
-
-| Tool | Purpose |
-|---|---|
-| Windows 11 | Lab operating system |
-| OnlineHashCrack PDF Hash Extractor | PM1 PDF hash extraction |
-| John the Ripper (Jumbo) | Offline password-candidate testing |
-| Johnny GUI | Graphical interface for John the Ripper |
-| NetworkWalks Hash Calculator | PM2 PDF hash extraction |
-| NetworkWalks Password Cracker | Browser-based dictionary attack |
-| Microsoft Edge | Accessing browser-based tools |
-
-## Final Report
-
-Add your summary and reflections to `Final-Report/week-3-report.md`.
-
-## Responsible Use and Privacy
-
-This repository is for education and authorized security training. Do not test files without permission. Do not upload confidential PDFs or sensitive documents to third-party tools.
-
-**Important before making this repository public:** The screenshots supplied for this exercise visibly contain recovered password text and challenge flags. Blur or crop those values before uploading the screenshots publicly, and remove full hashes, personal information, and any information the training provider expects to remain private. The README image links above assume you have saved sanitized versions using the exact filenames shown.
-
-## Acknowledgement
-
-Thanks to **NetworkWalks Academy** and the Week 3 instructors for the cybersecurity training exercises and practical learning resources.
-
-## Reference
-
-The repository structure and documentation approach were inspired by:
-
-[Networkwalks B084 – W3 PM1 & PM2 Password Cracking with JTR and NetworkWalks Tools](https://github.com/realuwes/Networkwalks-B084-W3-PM1-PM2-Password-Cracking-with-JTR-and-NW-Tools)
+Before making this repository public: The supplied screenshots visibly contain recovered password text and challenge flags. Blur or crop those values if they are not approved for public sharing. Also protect full hashes, personal information, and any other restricted training information.
+Acknowledgement
+Thanks to NetworkWalks Academy and the Week 3 instructors for the cybersecurity training exercises and practical learning resources.
