@@ -126,5 +126,6 @@ Responsible Use and Privacy
 This repository is for education and authorized security training. Do not test files without permission or upload confidential documents to third-party tools.
 
 Before making this repository public: The supplied screenshots visibly contain recovered password text and challenge flags. Blur or crop those values if they are not approved for public sharing. Also protect full hashes, personal information, and any other restricted training information.
+
 Acknowledgement
 Thanks to NetworkWalks Academy and the Week 3 instructors for the cybersecurity training exercises and practical learning resources.
