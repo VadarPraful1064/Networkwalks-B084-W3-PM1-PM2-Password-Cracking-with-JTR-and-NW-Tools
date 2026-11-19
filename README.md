@@ -1,15 +1,23 @@
-NetworkWalks B084 – Week 3: Password Recovery with John the Ripper & NetworkWalks Tools
-Cybersecurity Internship | Batch B084 | Week 3
-Modules: W3-PM1 and W3-PM2
-Environment: Windows 11
-Overview
-This repository documents my Week 3 practical work on password recovery for authorized, institute-provided PDF training files.
-- W3-PM1: PDF hash extraction and password recovery using John the Ripper (Jumbo) with the Johnny GUI.
-- W3-PM2: PDF hash extraction and dictionary attack using NetworkWalks Hash Calculator and Password Cracker.
-Authorization: These exercises were performed on training files for the internship. Use password-recovery techniques only on files you own or have explicit permission to test.
+# NetworkWalks B084 – Week 3: Password Recovery with John the Ripper & NetworkWalks Tools
 
-Repository Structure
-Important: The screenshot filenames below are the original filenames of the six images you uploaded. Keep these names unchanged when adding them to GitHub.
+**Cybersecurity Internship | Batch B084 | Week 3**  
+**Modules:** W3-PM1 and W3-PM2  
+**Environment:** Windows 11
+
+## Overview
+
+This repository documents my Week 3 practical work on password recovery for authorized, institute-provided PDF training files.
+
+- **W3-PM1:** PDF hash extraction and password recovery using John the Ripper (Jumbo) with the Johnny GUI.
+- **W3-PM2:** PDF hash extraction and dictionary attack using NetworkWalks Hash Calculator and Password Cracker.
+
+> **Authorization:** These exercises were performed on training files for the internship. Use password-recovery techniques only on files you own or have explicit permission to test.
+
+## Repository Structure
+
+**Important:** The screenshot filenames below are the original filenames of the six images you uploaded. Keep these names unchanged when adding them to GitHub.
+
+```text
 NetworkWalks-B084-Week3-Password-Recovery/
 │
 ├── README.md
@@ -28,15 +36,22 @@ NetworkWalks-B084-Week3-Password-Recovery/
 │
 └── Final-Report/
     └── week-3-report.md
-W3-PM1 – Password Recovery with John the Ripper
-Objective
+```
+
+## W3-PM1 – Password Recovery with John the Ripper
+
+### Objective
+
 Extract the PDF hash from the authorized training PDF, test password candidates using John the Ripper, and verify the recovered password against the PDF.
-Workflow
+
+### Workflow
+
 1. Extract the PDF hash using the PDF hash-extraction tool.
 2. Load the extracted hash into Johnny.
 3. Start the password-recovery process.
 4. Review the result in Johnny.
 5. Verify access by opening the corresponding training PDF.
+   
 Practical Evidence
 1. OnlineHashCrack – PDF Hash Extraction
 
